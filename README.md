@@ -1,4 +1,4 @@
 scalapit
 ========
 
-Scala Fun
+Adventures with Scala
