@@ -1,4 +1,4 @@
-import org.scalatest.{BeforeAndAfter, FunSpec}
+import org.scalatest.{FunSuite, BeforeAndAfter, FunSpec}
 
 /**
  *
@@ -10,7 +10,7 @@ import org.scalatest.{BeforeAndAfter, FunSpec}
  * Time: 14:43
  *
  */
-class ProductTests extends FunSpec with BeforeAndAfter {
+class ProductTests extends FunSuite with BeforeAndAfter {
 
   var product: Product = _
 
@@ -21,13 +21,18 @@ class ProductTests extends FunSpec with BeforeAndAfter {
   }
 
 
-  describe("A Product should be created") {
-    it("Will have a stock of 1 and a price of 12 with a description of shoe") {
-      assert(product.sku == 1)
-      assert(product.price == 12)
-      assert(product.description.equals("shoe"))
-    }
+  test("Will have a stock of 1 and a price of 12 with a description of shoe") {
+    assert(product.sku == 1)
+    assert(product.price == 12)
+    assert(product.description.equals("shoe"))
+  }
 
+
+  test("catching an assertion exception") {
+    val thrown = intercept[AssertionError] {
+      Product(0, 1, "")
+    }
+    assert(thrown.isInstanceOf[java.lang.AssertionError])
   }
 
 
