@@ -1,7 +1,9 @@
+package Product
+
 /**
  *
  *
- * Product pojo containing the normal stuff
+ * Product.Product pojo containing the normal stuff
  *
  * User: jameshoare
  * Date: 17/08/2013

@@ -1,5 +1,7 @@
+import Product.Product
+
 /**
- * Bootstrap Product
+ * Bootstrap Product.Product
  *
  * User: jameshoare
  * Date: 17/08/2013

@@ -1,24 +1,25 @@
+package Actors
+
 import akka.actor.{Props, ActorSystem, Actor}
 
 /**
- *
- * Love Actors :-)
- *
- * User: jameshoare
- * Date: 17/08/2013
- * Project: scalapit
- *
- */
+  *
+  * Love Actors :-)
+  *
+  * User: jameshoare
+  * Date: 17/08/2013
+  * Project: scalapit
+  *
+  */
 class ProductActor extends Actor {
 
-  def receive: Actor.Receive = {
+   def receive: Actor.Receive = {
 
-    case Product => println("Product recieved")
-    case _       => println("WTF")
-  }
+     case Product => println("Product.Product received")
+     case _       => println("WTF")
+   }
 
-}
-
+ }
 
 object main extends App {
 
