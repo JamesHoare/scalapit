@@ -17,7 +17,7 @@ class ProductTestsMock extends FunSuite with BeforeAndAfter with MockitoSugar {
   test ("test Productservice") {
 
     val productService = mock[ProductService]
-    when(productService.getProduct(1)).thenReturn(Some(Product(1,1,"shoe")))
+    when(productService.getProduct(1)).thenReturn(Some(Product(1,1,"jacket")))
 
 
   }
