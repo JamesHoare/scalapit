@@ -1,11 +1,11 @@
 import grizzled.slf4j.Logger
 import org.scalatest.{FunSuite, BeforeAndAfter}
-import Product.Product
+import product.Product
 
 /**
  *
  *
- * BDD Tests for Product.Product
+ * BDD Tests for product.product
  *
  * User: jameshoare
  * Date: 17/08/2013
@@ -16,11 +16,11 @@ class ProductTests extends FunSuite with BeforeAndAfter {
 
   val logger = Logger[this.type]
 
-  var product: Product.Product = _
+  var product: Product = _
 
   before {
 
-    product = new Product.Product(1, 12, "shoe")
+    product = new Product(1, 12, "shoe")
 
   }
 

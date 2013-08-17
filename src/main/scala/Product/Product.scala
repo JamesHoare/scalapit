@@ -1,16 +1,16 @@
-package Product
+package product
 
 /**
  *
  *
- * Product.Product pojo containing the normal stuff
+ * product.product pojo containing the normal stuff
  *
  * User: jameshoare
  * Date: 17/08/2013
  * Time: 14:38
  *
  */
-case class Product(sku : Int, price: Int, description : String) {
+case class Product(sku : Int = 1, price: Int = 100, description : String = "product description") {
 
   /**
    * pre conditions
