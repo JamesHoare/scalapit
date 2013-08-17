@@ -1,4 +1,5 @@
-import org.scalatest.{FunSuite, BeforeAndAfter, FunSpec}
+import grizzled.slf4j.Logger
+import org.scalatest.{FunSuite, BeforeAndAfter}
 
 /**
  *
@@ -11,6 +12,8 @@ import org.scalatest.{FunSuite, BeforeAndAfter, FunSpec}
  *
  */
 class ProductTests extends FunSuite with BeforeAndAfter {
+
+  val logger = Logger[this.type]
 
   var product: Product = _
 

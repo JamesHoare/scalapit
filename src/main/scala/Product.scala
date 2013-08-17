@@ -9,8 +9,19 @@
  *
  */
 case class Product(sku : Int, price: Int, description : String) {
+
+  /**
+   * pre conditions
+   */
   assert(sku != 0 && price != 0 && description.length > 0)
 
   override def equals(that: Any): Boolean = true
+
+  override def toString: String = s"product $sku $price $description"
+
+  /**
+   * delegate toString
+   */
+  def printProduct{println(this)}
 }
 
