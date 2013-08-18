@@ -6,7 +6,7 @@ import product.{Sku, Product}
 /**
  *
  *
- * BDD Tests for product.product
+ * BDD Tests for domain.product.domain.product
  *
  * User: jameshoare
  * Date: 17/08/2013

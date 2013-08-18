@@ -19,6 +19,7 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-remote"   % "2.2.0",
   "com.typesafe.akka" %% "akka-agent"    % "2.2.0",
   "com.typesafe.akka" %% "akka-testkit" % "2.2.0",
+  "mysql" % "mysql-connector-java" % "5.1.24",
   "org.clapper" %% "grizzled-slf4j" % "1.0.1"
 )
 
