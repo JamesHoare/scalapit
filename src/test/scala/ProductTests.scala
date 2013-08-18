@@ -20,12 +20,13 @@ class ProductTests extends FunSuite with BeforeAndAfter {
 
   before {
 
-    product = new Product(1, 12, "shoe")
+    product = Product(1, 12, "shoe")
 
   }
 
 
   test("Will have a stock of 1 and a price of 12 with a description of shoe") {
+    logger.info(product)
     assert(product.sku == 1)
     assert(product.price == 12)
     assert(product.description.equals("shoe"))
