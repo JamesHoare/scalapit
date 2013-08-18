@@ -16,6 +16,7 @@ libraryDependencies ++= Seq(
   "org.slf4j" % "slf4j-api" % "1.7.5",
   "org.slf4j" % "slf4j-simple" % "1.7.5",
   "com.typesafe.akka" %% "akka-actor" % "2.2.0",
+  "com.typesafe.akka" %% "akka-camel" % "2.2.0",
   "com.typesafe.akka" %% "akka-remote"   % "2.2.0",
   "com.typesafe.akka" %% "akka-agent"    % "2.2.0",
   "com.typesafe.akka" %% "akka-testkit" % "2.2.0",
