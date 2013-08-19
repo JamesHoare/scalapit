@@ -22,7 +22,7 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-testkit" % "2.2.0",
   "mysql" % "mysql-connector-java" % "5.1.24",
   "org.elasticsearch" % "elasticsearch" % "0.90.3",
-  "org.apache.activemq" % "activemq-camel" % "5.8.0",
+  "org.apache.activemq" % "activemq-core" % "5.7.0",
   "org.clapper" %% "grizzled-slf4j" % "1.0.1"
 )
 
