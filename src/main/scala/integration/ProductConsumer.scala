@@ -18,7 +18,7 @@ class ProductConsumer extends Consumer {
   val logger = Logger[this.type]
 
 
-  def endpointUri = "file:///Users/jameshoare/test"
+  def endpointUri = "file:///" + System.getProperty("user.home") + "/test"
 
   def receive = {
     case msg: CamelMessage ⇒ println("received %s" format msg.bodyAs[String])
