@@ -23,6 +23,9 @@ libraryDependencies ++= Seq(
   "mysql" % "mysql-connector-java" % "5.1.24",
   "org.elasticsearch" % "elasticsearch" % "0.90.3",
   "org.apache.activemq" % "activemq-core" % "5.7.0",
+  "org.apache.camel" % "camel-scala" % "2.11.1",
+  "org.apache.camel" % "camel-core" % "2.11.1",
+  "org.apache.camel" % "camel-jms" % "2.11.1",
   "org.clapper" %% "grizzled-slf4j" % "1.0.1"
 )
 
