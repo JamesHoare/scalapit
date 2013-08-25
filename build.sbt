@@ -8,6 +8,7 @@ scalaVersion := "2.10.2"
 resolvers ++=
 Seq("repo" at "http://repo.typesafe.com/typesafe/releases/",
 "Spray Repository"    at "http://repo.spray.io",
+"Eligosource Snapshots" at "http://repo.eligotech.com/nexus/content/repositories/eligosource-snapshots",
 "Spray Nightlies"     at "http://nightlies.spray.io/")
 
 libraryDependencies ++= Seq(
@@ -26,6 +27,8 @@ libraryDependencies ++= Seq(
   "org.apache.camel" % "camel-scala" % "2.11.1",
   "org.apache.camel" % "camel-core" % "2.11.1",
   "org.apache.camel" % "camel-jms" % "2.11.1",
+  "org.eligosource" %% "eventsourced-journal-leveldb" % "0.7-SNAPSHOT",
+  "org.eligosource" %% "eventsourced-core" % "0.7-SNAPSHOT",
   "org.clapper" %% "grizzled-slf4j" % "1.0.1"
 )
 

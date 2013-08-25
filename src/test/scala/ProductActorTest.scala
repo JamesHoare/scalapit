@@ -23,7 +23,8 @@ with StopAkkaSystem {
       productActorRef ! ProductStatusMessage("upcoming")
       productActorRef ! GetProductStatus(testActor)
       expectMsg(Vector("upcoming"))
-      //productActorRef.underlyingActor.state must (contain("whisper"))
+      productActorRef.underlyingActor.internalState must(contain("upcoming"))
+
     }
     "change state when it receives a message, multi-threaded" in {
       import ProductActorProtocol._
