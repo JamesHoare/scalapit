@@ -1,7 +1,11 @@
 import akka.actor.{Props, ActorRef, Actor, ActorSystem}
-import akka.testkit.{TestActorRef, TestKit}
+import akka.testkit.{TestProbe, TestActorRef, TestKit}
+import com.typesafe.config.ConfigFactory
+import grizzled.slf4j.Logger
 import org.scalatest.{WordSpec}
 import org.scalatest.matchers.MustMatchers
+import spray.json._
+import DefaultJsonProtocol._
 
 /**
  *
@@ -16,6 +20,10 @@ class ProductActorTest extends TestKit(ActorSystem("testsystem"))
 with WordSpec
 with MustMatchers
 with StopAkkaSystem {
+
+
+  val logger = Logger[this.type]
+
   "A Product Actor" must {
     "change state when it receives a message, single threaded" in {
       import ProductActorProtocol._
@@ -23,7 +31,11 @@ with StopAkkaSystem {
       productActorRef ! ProductStatusMessage("upcoming")
       productActorRef ! GetProductStatus(testActor)
       expectMsg(Vector("upcoming"))
-      productActorRef.underlyingActor.internalState must(contain("upcoming"))
+      productActorRef.underlyingActor.internalState must (contain("upcoming"))
+      //spray-json
+      /* val jsonAst = List(1, 2, 3).toJson.prettyPrint
+       logger.info(jsonAst)*/
+
 
     }
     "change state when it receives a message, multi-threaded" in {
@@ -33,7 +45,18 @@ with StopAkkaSystem {
       productActorRef ! ProductStatusMessage("normal")
       productActorRef ! GetProductStatus(testActor)
       expectMsg(Vector("pre-order", "normal"))
+
     }
+
+
+    "test application.conf properties" in {
+      // testing accessing properties from application.conf
+      val config = ConfigFactory.load()
+      val applicationVersion = config.getInt("ProductApplication.version")
+      assert(applicationVersion == 20)
+    }
+
+
   }
 }
 

@@ -3,6 +3,7 @@ package integration
 import akka.camel.{CamelMessage, Consumer}
 import akka.actor.{ActorSystem, Props, Actor}
 import grizzled.slf4j.Logger
+import com.typesafe.config.ConfigFactory
 
 /**
  *
@@ -29,7 +30,10 @@ class ProductConsumer extends Consumer {
 
 object ActorBootstrap extends App {
 
-  val system = ActorSystem("file-akka-system")
+  //loads application.conf can now access from configuration
+  val configuration = ConfigFactory.load()
+  val system = ActorSystem("file-akka-system",configuration)
+
   val fileActorRef = system.actorOf(Props[ProductConsumer])
 
 

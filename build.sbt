@@ -13,6 +13,7 @@ Seq("repo" at "http://repo.typesafe.com/typesafe/releases/",
 
 libraryDependencies ++= Seq(
   "org.scalatest" % "scalatest_2.10" % "1.9.1" % "test",
+  "io.spray" %%  "spray-json" % "1.2.5",
   "org.mockito" % "mockito-all" % "1.8.4",
   "org.slf4j" % "slf4j-api" % "1.7.5",
   "org.slf4j" % "slf4j-simple" % "1.7.5",
